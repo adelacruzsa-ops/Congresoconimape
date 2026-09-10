@@ -1,2 +1,2 @@
 # Congresoconimape
-II Congreso conimape 2026
+II Congreso CONIMAPE 2026
