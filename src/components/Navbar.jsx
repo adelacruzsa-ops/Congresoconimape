@@ -1,0 +1,101 @@
+import { useState } from 'react'
+import { LINK_FORM, NAV_LINKS } from '../config/constants'
+import { Link } from 'react-router-dom'
+
+export default function Navbar() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  return (
+    <header className="fixed top-0 left-0 w-full h-[90px] bg-black/90 backdrop-blur-md z-50 transition-all border-b border-white/10">
+      <nav className="max-w-7xl mx-auto h-full px-6 flex items-center justify-between">
+        {/* Logo Marca */}
+        <Link to="/" className="flex items-center">
+          <img src="/imagenes/logo.png" alt="Logo CONIMAPE" className="w-36 md:w-44 object-contain" />
+        </Link>
+
+        {/* Links Desktop */}
+        <ul className="hidden lg:flex items-center gap-6 list-none">
+          {NAV_LINKS.map((link, index) => (
+            <li key={index}>
+              {link.href.startsWith('/#') || link.href === '#' ? (
+                <a
+                  href={link.href}
+                  className="text-white/90 hover:text-gold-500 font-medium text-sm transition-colors duration-300"
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <Link
+                  to={link.href}
+                  className="text-white/90 hover:text-gold-500 font-medium text-sm transition-colors duration-300"
+                >
+                  {link.name}
+                </Link>
+              )}
+            </li>
+          ))}
+        </ul>
+
+        {/* Botón CTA Desktop */}
+        <div className="hidden lg:block">
+          <a
+            href={LINK_FORM}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-gold-500 hover:bg-gold-400 text-white font-semibold text-sm px-6 py-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-gold-500/30 hover:-translate-y-0.5"
+          >
+            Inscríbete
+          </a>
+        </div>
+
+        {/* Hamburguesa Móvil */}
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="lg:hidden text-white text-2xl focus:outline-none p-2"
+          aria-label="Abrir menú"
+        >
+          <i className={mobileMenuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'}></i>
+        </button>
+      </nav>
+
+      {/* Menú Desplegable Móvil */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden bg-black/95 border-b border-gold-500/30 px-6 py-6 space-y-4 shadow-2xl">
+          <ul className="flex flex-col gap-4">
+            {NAV_LINKS.map((link, index) => (
+              <li key={index}>
+                {link.href.startsWith('/#') || link.href === '#' ? (
+                  <a
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="text-white hover:text-gold-500 text-base block font-medium"
+                  >
+                    {link.name}
+                  </a>
+                ) : (
+                  <Link
+                    to={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="text-white hover:text-gold-500 text-base block font-medium"
+                  >
+                    {link.name}
+                  </Link>
+                )}
+              </li>
+            ))}
+          </ul>
+          <div className="pt-2">
+            <a
+              href={LINK_FORM}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full text-center bg-gold-500 hover:bg-gold-400 text-white font-semibold py-3 rounded-full transition-all"
+            >
+              Inscríbete ahora
+            </a>
+          </div>
+        </div>
+      )}
+    </header>
+  )
+}
