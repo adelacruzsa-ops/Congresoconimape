@@ -4,7 +4,7 @@ export default function About() {
   return (
     <section id="conocenos" className="py-24 px-6 md:px-12 bg-dark-surface">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
-        
+
         {/* Texto Informativo */}
         <div className="max-w-2xl text-left">
           <h2 className="text-4xl md:text-5xl font-extrabold text-gold-500 mb-4 tracking-tight">
@@ -16,13 +16,13 @@ export default function About() {
             Pequeña Minería y Minería Artesanal
           </h3>
 
-          <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-4">
+          <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-4 text-justify">
             CONIMAPE 2026 es un evento académico, técnico y empresarial enfocado en fortalecer
             la formalización, productividad, innovación y sostenibilidad de la pequeña minería
             y minería artesanal en el Perú.
           </p>
 
-          <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-10">
+          <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-10 text-justify">
             Un espacio de integración entre mineros, profesionales, estudiantes, empresas
             proveedoras e instituciones para compartir conocimientos, experiencias y soluciones
             aplicadas al sector minero.

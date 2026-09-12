@@ -5,6 +5,19 @@ import { Link } from 'react-router-dom'
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+  const handleNavClick = (e, href) => {
+    if (href.startsWith('/#')) {
+      const hashId = href.replace('/#', '')
+      const element = document.getElementById(hashId)
+      if (window.location.pathname === '/' && element) {
+        e.preventDefault()
+        element.scrollIntoView({ behavior: 'smooth' })
+        window.history.pushState(null, '', href)
+        setMobileMenuOpen(false)
+      }
+    }
+  }
+
   return (
     <header className="fixed top-0 left-0 w-full h-[90px] bg-black/90 backdrop-blur-md z-50 transition-all border-b border-white/10">
       <nav className="max-w-7xl mx-auto h-full px-6 flex items-center justify-between">
@@ -20,6 +33,7 @@ export default function Navbar() {
               {link.href.startsWith('/#') || link.href === '#' ? (
                 <a
                   href={link.href}
+                  onClick={(e) => handleNavClick(e, link.href)}
                   className="text-white/90 hover:text-gold-500 font-medium text-sm transition-colors duration-300"
                 >
                   {link.name}
@@ -67,7 +81,7 @@ export default function Navbar() {
                 {link.href.startsWith('/#') || link.href === '#' ? (
                   <a
                     href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={(e) => handleNavClick(e, link.href)}
                     className="text-white hover:text-gold-500 text-base block font-medium"
                   >
                     {link.name}

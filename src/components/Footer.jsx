@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer>
       {/* Sección Historia */}
-      <section
+      {/*       <section
         id="historia"
         className="py-24 px-6 md:px-12 text-center bg-cover bg-center relative"
         style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url('/imagenes/fondo pagina web.png')` }}
@@ -26,7 +26,7 @@ export default function Footer() {
             Ver Galería Completa
           </Link>
         </div>
-      </section>
+      </section> */}
 
       {/* Sección Contacto, Redes Sociales y Copyright */}
       <section id="contacto" className="py-16 px-6 bg-black border-t border-white/10 text-center">

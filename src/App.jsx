@@ -7,17 +7,28 @@ import WhatsAppButton from './components/WhatsAppButton'
 
 import Home from './pages/Home'
 import ProgramaPage from './pages/ProgramaPage'
-import PonentesPage from './pages/PonentesPage'
-import AuspiciadoresPage from './pages/AuspiciadoresPage'
+import ParticipantesPage from './pages/ParticipantesPage'
+import PreciosPage from './pages/PreciosPage'
 import NoticiasPage from './pages/NoticiasPage'
 import GaleriaPage from './pages/GaleriaPage'
 
-// Helper para hacer scroll arriba al cambiar de página
+// Helper para hacer scroll arriba al cambiar de página o navegar a un hash (#ubicacion, etc)
 function ScrollToTop() {
-  const { pathname } = useLocation()
+  const { pathname, hash } = useLocation()
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [pathname])
+    if (hash) {
+      const timer = setTimeout(() => {
+        const id = hash.replace('#', '')
+        const element = document.getElementById(id)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 150)
+      return () => clearTimeout(timer)
+    } else {
+      window.scrollTo(0, 0)
+    }
+  }, [pathname, hash])
   return null
 }
 
@@ -32,8 +43,12 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/programa" element={<ProgramaPage />} />
-            <Route path="/ponentes" element={<PonentesPage />} />
-            <Route path="/auspiciadores" element={<AuspiciadoresPage />} />
+            <Route path="/participantes" element={<ParticipantesPage />} />
+            <Route path="/ponentes" element={<ParticipantesPage defaultTab="ponentes" />} />
+            <Route path="/auspiciadores" element={<ParticipantesPage defaultTab="auspiciadores" />} />
+            <Route path="/colaboradores" element={<ParticipantesPage defaultTab="colaboradores" />} />
+            <Route path="/precios" element={<PreciosPage />} />
+            <Route path="/inversion" element={<PreciosPage />} />
             <Route path="/noticias" element={<NoticiasPage />} />
             <Route path="/galeria" element={<GaleriaPage />} />
           </Routes>

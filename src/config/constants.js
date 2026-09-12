@@ -37,13 +37,11 @@ export const LOCATION_INFO = {
 
 export const NAV_LINKS = [
     { name: 'Inicio', href: '/' },
-    { name: 'Sobre el Congreso', href: '/#conocenos' },
     { name: 'Programa', href: '/programa' },
-    { name: 'Ponentes', href: '/ponentes' },
-    { name: 'Auspiciadores', href: '/auspiciadores' },
+    { name: 'Participantes', href: '/participantes' },
+    { name: 'Precios', href: '/precios' },
     { name: 'Noticias', href: '/noticias' },
     { name: 'Galería', href: '/galeria' },
-    { name: 'Ubicación', href: '/#ubicacion' },
 ]
 
 export const PILARES = [
@@ -81,45 +79,39 @@ export const EJES_TEMATICOS = [
 ]
 
 // =========================================================================
-// LISTA DE PONENTES (Agregar o modificar aquí los conferencistas)
+// LISTA DE PONENTES (CONFERENCISTAS CONFIRMADOS Y DESTACADOS)
 // =========================================================================
 export const PONENTES = [
     {
         id: 1,
-        nombre: 'Ing. Carlos Mendoza',
-        cargo: 'Especialista en Formalización Minera',
-        institucion: 'Ministerio de Energía y Minas',
+        nombre: 'Ing. Carlos Mendoza Rueda',
+        cargo: 'Especialista en Formalización y Gestión MAPE',
+        institucion: 'Dirección General de Formalización Minera - MINEM',
         foto: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&auto=format&fit=crop&q=80',
-        tema: 'Avances y Retos en la Ley de Formalización MAPE en el Perú',
-        categoria: 'Internacional',
+        tema: 'Avances de la Nueva Ley MAPE y Desafíos de Formalización en el Perú',
+        categoria: 'Nacional',
+        biografia: 'Comprometido con la formalización inclusiva y articulada que transforme la minería artesanal en un motor económico seguro y sostenible.',
     },
     {
         id: 2,
         nombre: 'Dra. María Elena Torres',
-        cargo: 'Investigadora en Tecnologías Limpias',
-        institucion: 'Universidad Nacional de San Agustín',
+        cargo: 'Docente e Investigadora en Procesamiento Verde',
+        institucion: 'Universidad Nacional de San Agustín (UNSA)',
         foto: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format&fit=crop&q=80',
-        tema: 'Gravimetría y Lixiviación Ecológica sin Mercurio',
-        categoria: 'Nacional',
+        tema: 'Lixiviación Ecológica y Gravimetría Eficiente sin Mercurio',
+        categoria: 'Académico',
+        biografia: 'Impulsora del uso de tecnologías limpias aplicadas en laboratorio y campo para eliminar el mercurio en la pequeña minería.',
     },
     {
         id: 3,
         nombre: 'Dr. John Miller',
-        cargo: 'Consultor Internacional en Seguridad Minera',
+        cargo: 'Consultor Internacional en SST y Geomecánica',
         institucion: 'Global Mining Safety Institute',
         foto: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&auto=format&fit=crop&q=80',
-        tema: 'Estándares Internacionales de Prevención de Riesgos en Socavón',
+        tema: 'Prevención de Riesgos en Socavón y Estándares Internacionales',
         categoria: 'Internacional',
-    },
-    {
-        id: 4,
-        nombre: 'Ing. Ana Paula Quispe',
-        cargo: 'Directora de Sostenibilidad',
-        institucion: 'ONG Red Minera Sostenible',
-        foto: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&auto=format&fit=crop&q=80',
-        tema: 'Trazabilidad y Oro Ético en Mercados Internacionales',
-        categoria: 'Nacional',
-    },
+        biografia: 'Dedicado a promover estándares de prevención de riesgos en socavón y proteger la vida de cada trabajador minero.',
+    }
 ]
 
 // =========================================================================
@@ -161,18 +153,124 @@ export const CRONOGRAMA = [
 // =========================================================================
 export const AUSPICIADORES = {
     platino: [
-        { nombre: 'Empresa Minera Ejemplo 1', logo: '/imagenes/logo.png', categoria: 'Platino' },
-        { nombre: 'Proveedor Tecnológico 2', logo: '/imagenes/logo.png', categoria: 'Platino' },
+        {
+            nombre: 'ExploraMining SAC',
+            logo: '/imagenes/logo.png',
+            categoria: 'Platino',
+            descripcion: 'Proveedor de maquinaria pesada y soluciones tecnológicas orientadas al incremento de la productividad con seguridad en pequeña minería.',
+        }
     ],
     oro: [
-        { nombre: 'Maquinarias y Equipos SAC', logo: '/imagenes/logo.png', categoria: 'Oro' },
-        { nombre: 'Soluciones Ambientales Peru', logo: '/imagenes/logo.png', categoria: 'Oro' },
+        {
+            nombre: 'EcoTecnia Soluciones Mineras',
+            logo: '/imagenes/logo.png',
+            categoria: 'Oro',
+            descripcion: 'Empresa especializada en el diseño de circuitos gravimétricos y equipos de recuperación de oro sin uso de sustancias contaminantes.',
+        }
     ],
     aliados: [
-        { nombre: 'Gobierno Regional de Arequipa', logo: '/imagenes/logo.png', categoria: 'Institucional' },
-        { nombre: 'Colegio de Ingenieros del Perú', logo: '/imagenes/logo.png', categoria: 'Institucional' },
+        {
+            nombre: 'Colegio de Ingenieros del Perú - CD Arequipa',
+            logo: '/imagenes/logo.png',
+            categoria: 'Institucional',
+            descripcion: 'Institución gremial aliada comprometida con el desarrollo ético, técnico y profesional de los ingenieros y el sector minero regional.',
+        }
     ]
 }
+
+// =========================================================================
+// EQUIPO ORGANIZADOR Y COLABORADORES
+// =========================================================================
+export const COLABORADORES = [
+    {
+        id: 1,
+        nombre: 'María Emilia Pacompia Quilca',
+        rol: 'Coordinación de Logística y Protocolo',
+        institucion: 'Estudiante de Ing. de Minas - UNSA',
+        comision: 'Comisión Organizadora II CONIMAPE',
+        foto: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&auto=format&fit=crop&q=80',
+        biografia: 'Apasionada por la ingeniería de minas y motivada por contribuir al desarrollo de una minería artesanal formal, eficiente y con responsabilidad social.',
+    },
+    {
+        id: 2,
+        nombre: 'Diego Alejandro Mendoza Soto',
+        rol: 'Coordinación de Prensa y Cobertura Digital',
+        institucion: 'Estudiante de Ing. de Minas - UNSA',
+        comision: 'Comisión de Comunicaciones',
+        foto: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&auto=format&fit=crop&q=80',
+        biografia: 'Convencido de que la difusión clara de soluciones tecnológicas e investigaciones conecta a los productores mineros con el conocimiento de vanguardia.',
+    },
+    {
+        id: 3,
+        nombre: 'Valeria Sofía Quispe Mamani',
+        rol: 'Acreditación y Registro de Participantes',
+        institucion: 'Estudiante de Ing. Geológica - UNSA',
+        comision: 'Comisión de Registro y Atención',
+        foto: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&auto=format&fit=crop&q=80',
+        biografia: 'Entusiasmada por la integración multidisciplinaria y por brindar la mejor atención y experiencia a cada congresista en Arequipa.',
+    }
+]
+
+// =========================================================================
+// TARIFAS E INVERSIÓN (PRECIOS DE INSCRIPCIÓN)
+// =========================================================================
+export const PRECIOS = [
+    {
+        id: 'estudiantes',
+        nombre: 'Estudiantes & Universitarios',
+        precio: 'S/. 80',
+        moneda: 'PEN',
+        subtitulo: 'Dirigido a alumnos de pregrado e institutos técnicos',
+        destacado: false,
+        beneficios: [
+            'Acceso libre a los 3 días de conferencias magistrales',
+            'Kit oficial del estudiante (folder, libreta y lapicero)',
+            'Certificado digital de participación (30 horas lectivas)',
+            'Ingreso a la feria tecnológica y área de exhibición'
+        ]
+    },
+    {
+        id: 'mineros',
+        nombre: 'Pequeños Mineros & Artesanales',
+        precio: 'S/. 150',
+        moneda: 'PEN',
+        subtitulo: 'Tarifa especial para productores y mineros MAPE',
+        destacado: true,
+        popularLabel: 'MÁS RECOMENDADO',
+        beneficios: [
+            'Acceso completo a conferencias y mesas de trabajo',
+            'Kit oficial de congresista CONIMAPE 2026',
+            'Certificado oficial digital e impreso',
+            'Participación en la Rueda de Negocios y Feria',
+            'Coffee breaks durante las jornadas principales'
+        ]
+    },
+    {
+        id: 'profesionales',
+        nombre: 'Profesionales & Empresas',
+        precio: 'S/. 250',
+        moneda: 'PEN',
+        subtitulo: 'Ingenieros, consultores y ejecutivos del sector',
+        destacado: false,
+        beneficios: [
+            'Pase preferencial a todas las ponencias y talleres',
+            'Kit corporativo premium con carpeta técnica',
+            'Certificado preferencial firmado por directivos',
+            'Acceso al salón de networking empresarial',
+            'Inclusión en el directorio oficial de participantes'
+        ]
+    }
+]
+
+// =========================================================================
+// ESTADÍSTICAS E IMPACTO DEL CONGRESO (INSCRITOS HASTA AHORA)
+// =========================================================================
+export const ESTADISTICAS_EVENTO = [
+    { id: 1, numero: '+350', titulo: 'Inscritos Confirmados', descripcion: 'Mineros, profesionales y estudiantes registrados', icono: 'fa-solid fa-users' },
+    { id: 2, numero: '+15', titulo: 'Delegaciones Regionales', descripcion: 'Representantes de Puno, Arequipa, Madre de Dios y más', icono: 'fa-solid fa-map-location-dot' },
+    { id: 3, numero: '+25', titulo: 'Ponencias y Talleres', descripcion: 'Conferencias especializadas en 3 días de congreso', icono: 'fa-solid fa-chalkboard-user' },
+    { id: 4, numero: '+30', titulo: 'Empresas Aliadas', descripcion: 'Participando en la feria de tecnología minera', icono: 'fa-solid fa-handshake' },
+]
 
 // =========================================================================
 // NOTICIAS Y NOVEDADES
@@ -180,40 +278,62 @@ export const AUSPICIADORES = {
 export const NOTICIAS = [
     {
         id: 1,
-        titulo: 'Lanzamiento Oficial del II CONIMAPE 2026 en Arequipa',
-        fecha: '01 de Septiembre, 2026',
-        resumen: 'Se presentó oficialmente la II edición del Congreso Internacional de la Pequeña Minería con presencia de líderes del sector.',
-        imagen: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&auto=format&fit=crop&q=80',
-        contenido: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+        titulo: 'Arequipa será sede del II CONIMAPE 2026 sobre Minería Artesanal y Pequeña Minería',
+        fecha: '05 de Septiembre, 2026',
+        fuente: 'El Muqui Minería (@elmuquimineria)',
+        fuenteUrl: 'https://www.instagram.com/elmuquimineria/',
+        resumen: 'Del 4 al 6 de noviembre, Arequipa reunirá a pequeños productores, mineros artesanales, especialistas y autoridades para discutir los principales desafíos de la MAPE.',
+        imagen: '/carrusel/img5.jpeg',
+        contenido: `Del 4 al 6 de noviembre, Arequipa será sede del II Congreso Internacional de la Pequeña Minería y Minería Artesanal (CONIMAPE 2026), encuentro que reunirá a pequeños productores, mineros artesanales, especialistas, empresas y representantes del sector para discutir los principales desafíos de la MAPE.
+
+El congreso abordará temas como formalización minera, tecnologías limpias, seguridad y gestión ambiental, además de las dificultades que enfrenta el sector en capacitación técnica, acceso a financiamiento e incorporación a cadenas de valor formales. También se realizarán conferencias, mesas de diálogo, exhibiciones tecnológicas y una rueda de negocios.
+
+En un momento en que el país discute una nueva Ley MAPE, CONIMAPE 2026 se presenta como un espacio para intercambiar experiencias y plantear propuestas desde la realidad de la pequeña minería y minería artesanal. El encuentro es presidido por el ingeniero Luciano Taco Prado y busca reunir a representantes de distintas regiones del país.`,
+        tags: ['#ElMuqui', '#MineríaArtesanal', '#CONIMAPE2026', '#MAPE', '#Arequipa']
     },
     {
         id: 2,
-        titulo: 'Nuevas Becas de Asistencia para Estudiantes de Ingeniería de Minas',
-        fecha: '25 de Agosto, 2026',
-        resumen: 'El comité organizador dispondrá de 100 becas especiales para estudiantes universitarios destacados.',
+        titulo: 'Programa de Becas y Facilidades para Estudiantes e Investigadores Universitarios',
+        fecha: '28 de Agosto, 2026',
+        fuente: 'Comité Académico CONIMAPE',
+        resumen: 'El comité organizador del II CONIMAPE 2026 anunció la apertura de 100 becas de inscripción dirigidas a estudiantes de ingeniería de minas, geología y carreras afines.',
         imagen: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&auto=format&fit=crop&q=80',
-        contenido: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        contenido: `Con el firme compromiso de impulsar la formación académica y el desarrollo científico de las nuevas generaciones, el Comité Organizador del II CONIMAPE 2026 dispondrá de un programa especial de 100 becas integrales y parciales para estudiantes destacados de las facultades de Ingeniería de Minas, Geología, Metalurgia, Ciencias Ambientales y carreras afines de universidades públicas y privadas del Perú.
+
+Las becas otorgarán acceso completo a las conferencias magistrales, talleres especializados, feria tecnológica y certificado digital de participación firmado por las instituciones organizadoras. Los estudiantes interesados deberán presentar una constancia de estudios vigente y una breve carta de motivación donde expliquen su interés en el sector de la pequeña minería y minería artesanal.
+
+"Queremos que los futuros profesionales de la minería conozcan de cerca los retos reales del sector MAPE y aporten con innovación y tecnología a su desarrollo sostenible", señaló la comisión académica del congreso. La convocatoria estará abierta hasta agotar las vacantes disponibles.`,
+        tags: ['#BecasCONIMAPE', '#IngenieríaDeMinas', '#EstudiantesMineros', '#Innovación']
     },
     {
         id: 3,
-        titulo: 'Convocatoria de Trabajos de Investigación Abierta',
-        fecha: '15 de Agosto, 2026',
-        resumen: 'Investigadores y profesionales pueden enviar sus ponencias hasta el 30 de septiembre.',
+        titulo: 'Convocatoria Abierta para la Presentación de Trabajos de Investigación y Casos de Éxito',
+        fecha: '18 de Agosto, 2026',
+        fuente: 'Comisión Técnica CONIMAPE',
+        resumen: 'Investigadores, ingenieros y empresas del sector minero podrán enviar sus ponencias y resúmenes técnicos para ser presentados durante las jornadas del congreso.',
         imagen: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&auto=format&fit=crop&q=80',
-        contenido: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        contenido: `La Comisión Técnica del II Congreso Internacional de la Pequeña Minería y Minería Artesanal (CONIMAPE 2026) invita formalmente a profesionales, investigadores, docentes universitarios, consultores y productores mineros a enviar sus resúmenes (abstracts) de trabajos técnicos para ser evaluados por nuestro comité evaluador.
+
+Las ponencias seleccionadas serán presentadas oralmente dentro del programa oficial del evento y publicadas en las memorias del congreso. Las áreas temáticas comprenden:
+• Procesos de formalización y normatividad ambiental.
+• Métodos de explotación eficientes y seguridad en minería subterránea.
+• Tecnologías de procesamiento gravimétrico y lixiviación ecológica sin mercurio.
+• Economía circular, gestión de relaves y sostenibilidad comunitaria.
+
+Los resúmenes deberán ser enviados a través de nuestros canales oficiales. La fecha límite para la recepción de propuestas es el 30 de septiembre de 2026. Todos los ponentes aceptados recibirán un reconocimiento oficial y pase preferencial durante los tres días del congreso.`,
+        tags: ['#TrabajosTécnicos', '#InvestigaciónMinera', '#TecnologíaMAPE', '#Ponencias2026']
     }
 ]
 
 // =========================================================================
-// GALERÍA DE IMÁGENES (I EDICIÓN)
+// GALERÍA DE IMÁGENES (I EDICIÓN - CARRUSEL)
 // =========================================================================
 export const GALERIA_FOTOS = [
-    { id: 1, titulo: 'Inauguración I CONIMAPE', url: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&auto=format&fit=crop&q=80' },
-    { id: 2, titulo: 'Ponencia Magistral', url: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&auto=format&fit=crop&q=80' },
-    { id: 3, titulo: 'Feria Tecnológica', url: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&auto=format&fit=crop&q=80' },
-    { id: 4, titulo: 'Networking y Mineros', url: 'https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=600&auto=format&fit=crop&q=80' },
-    { id: 5, titulo: 'Exhibición de Equipos', url: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&auto=format&fit=crop&q=80' },
-    { id: 6, titulo: 'Clausura y Premiación', url: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&auto=format&fit=crop&q=80' }
+    { id: 5, titulo: 'Presentación en el Colegio de Ingenieros', url: '/carrusel/img5.jpeg' },
+    { id: 1, titulo: 'Conferencia del Sector Minero', url: '/carrusel/img1.jpeg' },
+    { id: 2, titulo: 'Asistentes y Participación del Público', url: '/carrusel/img2.jpeg' },
+    { id: 3, titulo: 'Ponencia Magistral del Evento', url: '/carrusel/img3.jpeg' },
+    { id: 4, titulo: 'Exposición y Conferencia Especializada', url: '/carrusel/img4.jpeg' },
 ]
 
 // =========================================================================
