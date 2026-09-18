@@ -52,14 +52,12 @@ export default function Navbar() {
 
         {/* Botón CTA Desktop */}
         <div className="hidden lg:block">
-          <a
-            href={LINK_FORM}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/inscripcion"
             className="inline-block bg-gold-500 hover:bg-gold-400 text-white font-semibold text-sm px-6 py-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-gold-500/30 hover:-translate-y-0.5"
           >
             Inscríbete
-          </a>
+          </Link>
         </div>
 
         {/* Hamburguesa Móvil */}
@@ -99,14 +97,13 @@ export default function Navbar() {
             ))}
           </ul>
           <div className="pt-2">
-            <a
-              href={LINK_FORM}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/inscripcion"
+              onClick={() => setMobileMenuOpen(false)}
               className="block w-full text-center bg-gold-500 hover:bg-gold-400 text-white font-semibold py-3 rounded-full transition-all"
             >
               Inscríbete ahora
-            </a>
+            </Link>
           </div>
         </div>
       )}

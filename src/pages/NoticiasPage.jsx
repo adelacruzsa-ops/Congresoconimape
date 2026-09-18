@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import { NOTICIAS, LINK_FORM } from '../config/constants'
+import { Link } from 'react-router-dom'
+import { NOTICIAS } from '../config/constants'
 import { ArrowLeft, Calendar, ExternalLink, Share2, Tag, ArrowRight } from 'lucide-react'
 
 export default function NoticiasPage() {
@@ -104,14 +105,12 @@ export default function NoticiasPage() {
                   Acompáñanos del 04 al 06 de noviembre en el encuentro más importante del sector minero artesanal.
                 </p>
               </div>
-              <a
-                href={LINK_FORM}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/inscripcion"
                 className="shrink-0 bg-amber-500 hover:bg-amber-400 text-black font-bold px-6 py-3 rounded-full transition-all shadow-lg inline-flex items-center gap-2"
               >
                 Inscríbete Aquí <ArrowRight size={16} />
-              </a>
+              </Link>
             </div>
 
             {/* Otras Noticias Relacionadas */}

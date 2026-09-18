@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { CRONOGRAMA, LINK_FORM } from '../config/constants'
+import { CRONOGRAMA } from '../config/constants'
+import { Link } from 'react-router-dom'
 
 export default function ProgramaPage() {
   const [activeTab, setActiveTab] = useState(0)
@@ -60,14 +61,12 @@ export default function ProgramaPage() {
           </div>
 
           <div className="pt-6 text-center">
-            <a
-              href={LINK_FORM}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/inscripcion"
               className="inline-block bg-gold-500 hover:bg-gold-400 text-white font-bold px-8 py-3.5 rounded-full transition-all shadow-lg"
             >
               Inscríbete ahora para asistir
-            </a>
+            </Link>
           </div>
         </div>
       </div>

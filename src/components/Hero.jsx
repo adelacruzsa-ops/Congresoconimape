@@ -1,4 +1,5 @@
-import { LINK_FORM, EVENT_DETAILS } from '../config/constants'
+import { EVENT_DETAILS } from '../config/constants'
+import { Link } from 'react-router-dom'
 
 export default function Hero() {
   return (
@@ -43,14 +44,12 @@ export default function Hero() {
           </span>
         </div>
 
-        <a
-          href={LINK_FORM}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/inscripcion"
           className="bg-gold-500 hover:bg-gold-300 text-white font-bold text-lg px-10 py-4 rounded-full shadow-lg shadow-gold-500/30 hover:shadow-gold-500/50 hover:-translate-y-1 transition-all duration-300"
         >
           Inscríbete ahora
-        </a>
+        </Link>
 
         <div className="mt-12 text-xs md:text-sm tracking-[0.2em] text-gray-300 opacity-80 animate-bounce">
           <span className="block text-xl mb-1">↓</span>

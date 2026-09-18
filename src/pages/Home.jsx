@@ -51,15 +51,13 @@ export default function Home() {
           </div>
 
           <div className="mt-10">
-            <a
-              href={LINK_FORM}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/inscripcion"
               className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-bold px-8 py-3.5 rounded-full transition-all shadow-lg hover:scale-105"
             >
               <span>¡Asegura tu vacante! Inscríbete Aquí</span>
               <i className="fa-solid fa-arrow-right text-sm"></i>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

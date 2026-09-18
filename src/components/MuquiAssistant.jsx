@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
-import { FAQ_MUQUI, LINK_FORM, WHATSAPP_NUMBER } from '../config/constants'
+import { Link } from 'react-router-dom'
+import { FAQ_MUQUI, WHATSAPP_NUMBER } from '../config/constants'
 import { ChevronDown, ChevronUp, RotateCcw, X, Send, Sparkles } from 'lucide-react'
 
 export default function MuquiAssistant() {
@@ -126,15 +127,14 @@ export default function MuquiAssistant() {
 
           {/* Footer del Chat con Botón de Inscripción */}
           <div className="p-3 bg-[#181818] border-t border-white/10 text-center">
-            <a
-              href={LINK_FORM}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/inscripcion"
+              onClick={() => setIsOpen(false)}
               className="block w-full bg-amber-500 hover:bg-amber-400 text-black font-bold text-xs py-2.5 rounded-xl transition-all shadow-md inline-flex items-center justify-center gap-2"
             >
-              <span>Inscríbete aquí en el Formulario Oficial</span>
+              <span>Inscríbete aquí (Guía y Formularios)</span>
               <Send size={14} />
-            </a>
+            </Link>
           </div>
         </div>
       )}

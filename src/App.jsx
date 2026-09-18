@@ -11,6 +11,7 @@ import ParticipantesPage from './pages/ParticipantesPage'
 import PreciosPage from './pages/PreciosPage'
 import NoticiasPage from './pages/NoticiasPage'
 import GaleriaPage from './pages/GaleriaPage'
+import InscripcionDetallePage from './pages/InscripcionDetallePage'
 
 // Helper para hacer scroll arriba al cambiar de página o navegar a un hash (#ubicacion, etc)
 function ScrollToTop() {
@@ -49,6 +50,7 @@ export default function App() {
             <Route path="/colaboradores" element={<ParticipantesPage defaultTab="colaboradores" />} />
             <Route path="/precios" element={<PreciosPage />} />
             <Route path="/inversion" element={<PreciosPage />} />
+            <Route path="/inscripcion" element={<InscripcionDetallePage />} />
             <Route path="/noticias" element={<NoticiasPage />} />
             <Route path="/galeria" element={<GaleriaPage />} />
           </Routes>

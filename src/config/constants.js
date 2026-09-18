@@ -3,7 +3,13 @@
 // Edita este archivo para modificar textos, agregar ponentes, noticias o auspiciadores.
 // =========================================================================
 
-export const LINK_FORM = 'https://forms.gle/mpHBCAgK6z5Wqk9A6'
+export const LINKS_INSCRIPCION = {
+    individual: 'https://forms.gle/FeGs4GmvtyRWoUaEA',
+    grupal: 'https://forms.gle/oj8vHPq4AWH7Yonj6',
+    corporativa: 'https://forms.gle/cJCPnWPfDGEt4UjW9',
+}
+export const LINK_FORM = LINKS_INSCRIPCION.individual
+
 export const WHATSAPP_NUMBER = '51963799271'
 export const WHATSAPP_DISPLAY = '+51 963 799 271'
 export const CONTACT_EMAIL = 'conimape.congreso@gmail.com'

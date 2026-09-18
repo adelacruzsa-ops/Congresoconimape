@@ -1,4 +1,4 @@
-import { PRECIOS, LINK_FORM, WHATSAPP_NUMBER, CONTACT_EMAIL } from '../config/constants'
+import { PRECIOS, LINK_FORM, LINKS_INSCRIPCION, WHATSAPP_NUMBER, CONTACT_EMAIL } from '../config/constants'
 import { Check, ShieldCheck, CreditCard, Sparkles, HelpCircle, ArrowRight } from 'lucide-react'
 
 export default function PreciosPage() {
@@ -14,20 +14,30 @@ export default function PreciosPage() {
         <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white mb-4 tracking-tight">
           Precios de Inscripción CONIMAPE 2026
         </h1>
-        <p className="text-gray-300 text-base sm:text-lg max-w-3xl mx-auto mb-16 leading-relaxed">
+        <p className="text-gray-300 text-base sm:text-lg max-w-3xl mx-auto mb-8 leading-relaxed">
           Elige la tarifa que mejor se adapte a tu perfil y asegura tu vacante para el congreso minero más importante del año en Arequipa.
         </p>
+
+        <div className="mb-16">
+          <a
+            href="/inscripcion"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-extrabold px-8 py-3.5 rounded-full shadow-lg hover:scale-105 transition-all"
+          >
+            <Sparkles size={18} />
+            <span>Ver Guía Detallada de Medios de Pago e Inscripción</span>
+            <ArrowRight size={18} />
+          </a>
+        </div>
 
         {/* Grid de Tarjetas de Precios */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch mb-20">
           {PRECIOS.map((plan) => (
             <div
               key={plan.id}
-              className={`relative rounded-3xl p-8 flex flex-col justify-between text-left transition-all duration-300 ${
-                plan.destacado
+              className={`relative rounded-3xl p-8 flex flex-col justify-between text-left transition-all duration-300 ${plan.destacado
                   ? 'bg-gradient-to-b from-amber-500/20 via-dark-surface to-dark-surface border-2 border-amber-400 shadow-2xl shadow-amber-500/15 scale-105 z-10'
                   : 'bg-dark-surface border border-white/10 shadow-xl hover:border-white/30'
-              }`}
+                }`}
             >
               {plan.destacado && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-amber-500 text-black text-xs font-extrabold px-4 py-1.5 rounded-full shadow-lg tracking-wider flex items-center gap-1">
@@ -62,14 +72,19 @@ export default function PreciosPage() {
 
               <div>
                 <a
-                  href={LINK_FORM}
+                  href={
+                    plan.id === 'grupal'
+                      ? LINKS_INSCRIPCION.grupal
+                      : plan.id === 'profesionales'
+                        ? LINKS_INSCRIPCION.corporativa
+                        : LINKS_INSCRIPCION.individual
+                  }
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-full inline-flex items-center justify-center gap-2 font-bold py-3.5 rounded-full transition-all duration-300 shadow-md ${
-                    plan.destacado
+                  className={`w-full inline-flex items-center justify-center gap-2 font-bold py-3.5 rounded-full transition-all duration-300 shadow-md ${plan.destacado
                       ? 'bg-amber-500 hover:bg-amber-400 text-black shadow-amber-500/20 hover:scale-102'
                       : 'bg-white/10 hover:bg-amber-500 hover:text-black text-white'
-                  }`}
+                    }`}
                 >
                   <span>Inscríbete Ahora</span>
                   <ArrowRight size={16} />
