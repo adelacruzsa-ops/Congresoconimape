@@ -10,10 +10,18 @@ export const LINKS_INSCRIPCION = {
 }
 export const LINK_FORM = LINKS_INSCRIPCION.individual
 
-export const WHATSAPP_NUMBER = '51963799271'
-export const WHATSAPP_DISPLAY = '+51 963 799 271'
+// =========================================================================
+// VARIABLES DE CONTROL DE VISIBILIDAD (Configura en true o false)
+// =========================================================================
+export const MOSTRAR_PROGRAMA = false
+export const MOSTRAR_PONENTES = false
+
+export const WHATSAPP_NUMBER = '51942503614'
+export const WHATSAPP_DISPLAY = '+51 942 503 614'
 export const CONTACT_EMAIL = 'conimape.congreso@gmail.com'
 export const WHATSAPP_MESSAGE = 'Hola, me gustaría recibir más información sobre el II CONIMAPE 2026.'
+
+export const WHATSAPP_COMMUNITY_LINK = 'https://chat.whatsapp.com/CP2MCpcwB0S4VTeEmUDBID'
 
 export const SOCIAL_LINKS = {
     facebook: 'https://web.facebook.com/profile.php?id=61594049040685',
@@ -45,8 +53,8 @@ export const NAV_LINKS = [
     { name: 'Inicio', href: '/' },
     { name: 'Programa', href: '/programa' },
     { name: 'Participantes', href: '/participantes' },
-    { name: 'Precios', href: '/precios' },
-    { name: 'Noticias', href: '/noticias' },
+    { name: 'Precios e Inscripción', href: '/inscripcion' },
+    { name: 'Feria Tecnológica', href: '/feria-tecnologica' },
     { name: 'Galería', href: '/galeria' },
 ]
 
@@ -75,13 +83,7 @@ export const EJES_TEMATICOS = [
         iconoClass: 'fa-solid fa-leaf',
         titulo: 'Gestión Ambiental y Tecnologías Limpias',
         descripcion: 'Impulsamos una minería responsable, reducción del uso de mercurio, cianuración eficiente y cuidado del entorno.',
-    },
-    {
-        id: 4,
-        iconoClass: 'fa-solid fa-chart-line',
-        titulo: 'Comercialización y Financiamiento',
-        descripcion: 'Mecanismos de acceso a créditos, trazabilidad de minerales y alianzas de mercado responsable.',
-    },
+    }
 ]
 
 // =========================================================================
@@ -222,48 +224,51 @@ export const COLABORADORES = [
 // =========================================================================
 export const PRECIOS = [
     {
-        id: 'estudiantes',
-        nombre: 'Estudiantes & Universitarios',
+        id: 'individual',
+        nombre: 'Inscripción Individual',
         precio: 'S/. 80',
         moneda: 'PEN',
-        subtitulo: 'Dirigido a alumnos de pregrado e institutos técnicos',
+        subtitulo: 'Asistentes individuales (General S/80, CIP S/70, Estudiantes S/50)',
         destacado: false,
+        link: LINKS_INSCRIPCION.individual,
         beneficios: [
-            'Acceso libre a los 3 días de conferencias magistrales',
-            'Kit oficial del estudiante (folder, libreta y lapicero)',
-            'Certificado digital de participación (30 horas lectivas)',
-            'Ingreso a la feria tecnológica y área de exhibición'
-        ]
-    },
-    {
-        id: 'mineros',
-        nombre: 'Pequeños Mineros & Artesanales',
-        precio: 'S/. 150',
-        moneda: 'PEN',
-        subtitulo: 'Tarifa especial para productores y mineros MAPE',
-        destacado: true,
-        popularLabel: 'MÁS RECOMENDADO',
-        beneficios: [
-            'Acceso completo a conferencias y mesas de trabajo',
+            'Acceso libre a las conferencias los 3 días',
             'Kit oficial de congresista CONIMAPE 2026',
-            'Certificado oficial digital e impreso',
-            'Participación en la Rueda de Negocios y Feria',
-            'Coffee breaks durante las jornadas principales'
+            'Certificado digital de participación (30 horas)',
+            'Ingreso a la Feria Tecnológica EXPO CONIMAPE'
         ]
     },
     {
-        id: 'profesionales',
-        nombre: 'Profesionales & Empresas',
-        precio: 'S/. 250',
-        moneda: 'PEN',
-        subtitulo: 'Ingenieros, consultores y ejecutivos del sector',
-        destacado: false,
+        id: 'grupal',
+        nombre: 'Inscripción Grupal (5 Asistentes)',
+        precio: 'S/. 60',
+        moneda: 'PEN / pers.',
+        subtitulo: '¡Ahorra más! Tarifa especial para delegaciones (General S/60, CIP S/50, Estudiantes S/30)',
+        destacado: true,
+        popularLabel: 'MÁS RECOMENDADO (DELEGACIONES)',
+        link: LINKS_INSCRIPCION.grupal,
         beneficios: [
-            'Pase preferencial a todas las ponencias y talleres',
-            'Kit corporativo premium con carpeta técnica',
-            'Certificado preferencial firmado por directivos',
-            'Acceso al salón de networking empresarial',
-            'Inclusión en el directorio oficial de participantes'
+            'Descuento especial aplicable desde 5 personas',
+            'Acceso completo a ponencias y mesas de trabajo',
+            'Kits oficiales para todos los integrantes',
+            'Certificados individuales de participación',
+            'Pase a la Rueda de Negocios y Feria'
+        ]
+    },
+    {
+        id: 'corporativa',
+        nombre: 'Inscripción Corporativa',
+        precio: 'Personalizado',
+        moneda: 'EMPRESAS',
+        subtitulo: 'Registro institucional para delegaciones empresariales y planillas',
+        destacado: false,
+        link: LINKS_INSCRIPCION.corporativa,
+        beneficios: [
+            'Facturación y atención personalizada',
+            'Kits corporativos premium para la delegación',
+            'Certificados oficiales con mención institucional',
+            'Pases preferenciales al área de networking',
+            'Inclusión en el directorio de delegaciones'
         ]
     }
 ]

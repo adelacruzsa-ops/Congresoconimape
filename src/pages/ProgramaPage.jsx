@@ -1,9 +1,43 @@
 import { useState } from 'react'
-import { CRONOGRAMA } from '../config/constants'
+import { CRONOGRAMA, MOSTRAR_PROGRAMA } from '../config/constants'
 import { Link } from 'react-router-dom'
+import { Clock, Calendar, Sparkles, ArrowRight } from 'lucide-react'
 
 export default function ProgramaPage() {
   const [activeTab, setActiveTab] = useState(0)
+
+  if (!MOSTRAR_PROGRAMA) {
+    return (
+      <div className="pt-28 pb-20 px-6 md:px-12 bg-dark-bg min-h-screen flex flex-col justify-center items-center text-center">
+        <div className="max-w-3xl mx-auto bg-dark-surface border border-amber-500/20 rounded-3xl p-10 sm:p-14 shadow-2xl relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl -z-0"></div>
+          <div className="relative z-10 flex flex-col items-center">
+            <div className="w-20 h-20 rounded-3xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-6 shadow-lg">
+              <Clock size={40} />
+            </div>
+            <span className="px-4 py-1.5 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold uppercase tracking-widest mb-4 border border-amber-500/30">
+              PRÓXIMAMENTE
+            </span>
+            <h1 className="text-3xl sm:text-5xl font-extrabold text-white mb-4">
+              Programa Oficial en Elaboración
+            </h1>
+            <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-8">
+              Estamos ultimando los detalles de las ponencias magistrales, bloques temáticos y horarios del II CONIMAPE 2026. La agenda detallada estará disponible muy pronto.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <Link
+                to="/inscripcion"
+                className="bg-amber-500 hover:bg-amber-400 text-black font-extrabold px-8 py-3.5 rounded-full transition-all shadow-lg hover:scale-105 inline-flex items-center gap-2 text-sm"
+              >
+                <span>Asegura tu Entrada Anticipada</span>
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="pt-28 pb-20 px-6 md:px-12 bg-dark-bg min-h-screen">
@@ -21,11 +55,10 @@ export default function ProgramaPage() {
             <button
               key={index}
               onClick={() => setActiveTab(index)}
-              className={`px-6 py-3 rounded-full text-sm md:text-base font-bold transition-all duration-300 ${
-                activeTab === index
+              className={`px-6 py-3 rounded-full text-sm md:text-base font-bold transition-all duration-300 ${activeTab === index
                   ? 'bg-gold-500 text-white shadow-lg shadow-gold-500/30'
                   : 'bg-white/5 text-gray-300 hover:bg-white/10 border border-white/10'
-              }`}
+                }`}
             >
               {item.dia}
             </button>

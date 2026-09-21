@@ -9,7 +9,7 @@ import Home from './pages/Home'
 import ProgramaPage from './pages/ProgramaPage'
 import ParticipantesPage from './pages/ParticipantesPage'
 import PreciosPage from './pages/PreciosPage'
-import NoticiasPage from './pages/NoticiasPage'
+import FeriaTecnologicaPage from './pages/FeriaTecnologicaPage'
 import GaleriaPage from './pages/GaleriaPage'
 import InscripcionDetallePage from './pages/InscripcionDetallePage'
 
@@ -48,10 +48,10 @@ export default function App() {
             <Route path="/ponentes" element={<ParticipantesPage defaultTab="ponentes" />} />
             <Route path="/auspiciadores" element={<ParticipantesPage defaultTab="auspiciadores" />} />
             <Route path="/colaboradores" element={<ParticipantesPage defaultTab="colaboradores" />} />
-            <Route path="/precios" element={<PreciosPage />} />
-            <Route path="/inversion" element={<PreciosPage />} />
+            <Route path="/precios" element={<InscripcionDetallePage />} />
+            <Route path="/inversion" element={<InscripcionDetallePage />} />
             <Route path="/inscripcion" element={<InscripcionDetallePage />} />
-            <Route path="/noticias" element={<NoticiasPage />} />
+            <Route path="/feria-tecnologica" element={<FeriaTecnologicaPage />} />
             <Route path="/galeria" element={<GaleriaPage />} />
           </Routes>
         </div>

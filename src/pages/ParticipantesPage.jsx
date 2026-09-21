@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { PONENTES, AUSPICIADORES, COLABORADORES, WHATSAPP_NUMBER, CONTACT_EMAIL } from '../config/constants'
+import { PONENTES, AUSPICIADORES, COLABORADORES, WHATSAPP_NUMBER, CONTACT_EMAIL, MOSTRAR_PONENTES } from '../config/constants'
 import { UserCheck, Award, Users, Send, CheckCircle2, BookOpen, Leaf, ShieldCheck, TrendingUp, Sparkles, HeartHandshake, ClipboardList, Quote } from 'lucide-react'
 
 export default function ParticipantesPage({ defaultTab }) {
@@ -58,11 +58,10 @@ export default function ParticipantesPage({ defaultTab }) {
         <div className="flex flex-wrap justify-center items-center gap-3 mb-12 bg-dark-surface/80 p-2 rounded-2xl border border-white/10 max-w-3xl mx-auto backdrop-blur-md">
           <button
             onClick={() => handleTabChange('ponentes')}
-            className={`flex items-center gap-2.5 px-6 py-3 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 flex-1 justify-center ${
-              activeTab === 'ponentes'
-                ? 'bg-amber-500 text-black shadow-lg shadow-amber-500/20 scale-102'
-                : 'text-gray-300 hover:text-white hover:bg-white/5'
-            }`}
+            className={`flex items-center gap-2.5 px-6 py-3 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 flex-1 justify-center ${activeTab === 'ponentes'
+              ? 'bg-amber-500 text-black shadow-lg shadow-amber-500/20 scale-102'
+              : 'text-gray-300 hover:text-white hover:bg-white/5'
+              }`}
           >
             <UserCheck size={20} />
             <span>Ponentes</span>
@@ -70,11 +69,10 @@ export default function ParticipantesPage({ defaultTab }) {
 
           <button
             onClick={() => handleTabChange('auspiciadores')}
-            className={`flex items-center gap-2.5 px-6 py-3 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 flex-1 justify-center ${
-              activeTab === 'auspiciadores'
-                ? 'bg-amber-500 text-black shadow-lg shadow-amber-500/20 scale-102'
-                : 'text-gray-300 hover:text-white hover:bg-white/5'
-            }`}
+            className={`flex items-center gap-2.5 px-6 py-3 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 flex-1 justify-center ${activeTab === 'auspiciadores'
+              ? 'bg-amber-500 text-black shadow-lg shadow-amber-500/20 scale-102'
+              : 'text-gray-300 hover:text-white hover:bg-white/5'
+              }`}
           >
             <Award size={20} />
             <span>Auspiciadores</span>
@@ -82,11 +80,10 @@ export default function ParticipantesPage({ defaultTab }) {
 
           <button
             onClick={() => handleTabChange('colaboradores')}
-            className={`flex items-center gap-2.5 px-6 py-3 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 flex-1 justify-center ${
-              activeTab === 'colaboradores'
-                ? 'bg-amber-500 text-black shadow-lg shadow-amber-500/20 scale-102'
-                : 'text-gray-300 hover:text-white hover:bg-white/5'
-            }`}
+            className={`flex items-center gap-2.5 px-6 py-3 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 flex-1 justify-center ${activeTab === 'colaboradores'
+              ? 'bg-amber-500 text-black shadow-lg shadow-amber-500/20 scale-102'
+              : 'text-gray-300 hover:text-white hover:bg-white/5'
+              }`}
           >
             <Users size={20} />
             <span>Colaboradores</span>
@@ -98,39 +95,35 @@ export default function ParticipantesPage({ defaultTab }) {
            ========================================================================= */}
         {activeTab === 'ponentes' && (
           <div className="animate-fadeIn">
-            {hasSpeakers ? (
+            {MOSTRAR_PONENTES && hasSpeakers ? (
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                 {PONENTES.map((ponente) => (
                   <div
                     key={ponente.id}
-                    className="bg-dark-surface border border-white/10 rounded-3xl overflow-hidden shadow-xl hover:border-amber-400 transition-all duration-300 flex flex-col justify-between text-left group"
+                    className="bg-dark-surface border border-white/10 rounded-3xl overflow-hidden shadow-xl hover:border-amber-400 transition-all flex flex-col justify-between text-left group"
                   >
-                    <div className="relative h-64 overflow-hidden bg-black">
-                      <img
-                        src={ponente.foto}
-                        alt={ponente.nombre}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <span className="absolute top-4 left-4 text-xs font-bold text-black bg-amber-400 px-3 py-1 rounded-full shadow-md uppercase tracking-wider">
-                        {ponente.categoria}
-                      </span>
-                    </div>
+                    <div>
+                      <div className="h-64 overflow-hidden bg-black relative">
+                        <img
+                          src={ponente.foto}
+                          alt={ponente.nombre}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <span className="absolute top-4 right-4 bg-amber-500 text-black font-extrabold text-xs px-3 py-1 rounded-full shadow-lg">
+                          {ponente.categoria}
+                        </span>
+                      </div>
 
-                    <div className="p-6 flex-1 flex flex-col justify-between">
-                      <div>
-                        <h2 className="text-xl font-bold text-white mb-1">
+                      <div className="p-6">
+                        <h3 className="text-xl font-bold text-white mb-1 group-hover:text-amber-300 transition-colors">
                           {ponente.nombre}
-                        </h2>
-                        <p className="text-xs text-amber-400 font-medium mb-1">
-                          {ponente.cargo}
-                        </p>
-                        <p className="text-xs text-gray-400 mb-4">
-                          {ponente.institucion}
-                        </p>
+                        </h3>
+                        <p className="text-xs text-amber-400 font-semibold mb-1">{ponente.cargo}</p>
+                        <p className="text-xs text-gray-400 mb-4">{ponente.institucion}</p>
 
-                        <div className="bg-white/5 p-3 rounded-xl border border-white/5 mb-4">
-                          <span className="text-[11px] font-bold text-amber-300 block mb-0.5">🎤 Tema a exponer:</span>
-                          <p className="text-xs text-gray-200 font-medium">"{ponente.tema}"</p>
+                        <div className="bg-white/5 p-4 rounded-2xl border border-white/5 mb-4">
+                          <span className="text-[11px] font-bold text-gray-400 uppercase block mb-1">TEMA / PONENCIA:</span>
+                          <p className="text-sm font-semibold text-white leading-snug">{ponente.tema}</p>
                         </div>
 
                         {ponente.biografia && (
@@ -144,40 +137,35 @@ export default function ParticipantesPage({ defaultTab }) {
                   </div>
                 ))}
               </div>
-            ) : null}
-
-            {/* Banner CTA permanente para promover la postulación de Ponentes */}
-            <div className="bg-gradient-to-r from-amber-500/20 via-amber-500/10 to-transparent border border-amber-500/30 rounded-3xl p-8 sm:p-12 text-center max-w-4xl mx-auto shadow-2xl backdrop-blur-md">
-              <span className="inline-block px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-semibold mb-3 border border-amber-500/30">
-                <Sparkles className="inline mr-1" size={14} /> CONVOCATORIA DE PONENTES ABIERTA
-              </span>
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-3">
-                ¿Deseas presentar tu ponencia o investigación en el II CONIMAPE?
-              </h3>
-              <p className="text-gray-300 text-sm sm:text-base mb-8 max-w-2xl mx-auto leading-relaxed">
-                Buscamos ingenieros, investigadores y líderes que deseen compartir experiencias de éxito en formalización, seguridad y tecnologías ecológicas.
-              </p>
-
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a
-                  href={whatsappUrlPonentes}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-amber-500 hover:bg-amber-400 text-black font-bold text-base px-8 py-3.5 rounded-full transition-all shadow-xl hover:scale-105"
-                >
-                  <i className="fa-brands fa-whatsapp text-xl"></i>
-                  <span>Postular Ponencia por WhatsApp</span>
-                </a>
-
-                <a
-                  href={`mailto:${CONTACT_EMAIL}?subject=Postulacion%20de%20Ponencia%20CONIMAPE%202026`}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold text-base px-8 py-3.5 rounded-full transition-all border border-white/20"
-                >
-                  <Send size={18} />
-                  <span>Enviar Resumen por Correo</span>
-                </a>
+            ) : (
+              /* ESTADO OCULTO / PRÓXIMAMENTE PARA PONENTES */
+              <div className="bg-dark-surface border border-amber-500/20 rounded-3xl p-10 sm:p-14 text-center max-w-3xl mx-auto mb-16 shadow-2xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl -z-0"></div>
+                <div className="relative z-10 flex flex-col items-center">
+                  <div className="w-20 h-20 rounded-3xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-6 shadow-lg">
+                    <UserCheck size={40} />
+                  </div>
+                  <span className="px-4 py-1.5 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold uppercase tracking-widest mb-4 border border-amber-500/30">
+                    PRÓXIMAMENTE
+                  </span>
+                  <h2 className="text-2xl sm:text-4xl font-extrabold text-white mb-3">
+                    Lista de Ponentes Confirmados en Confirmación
+                  </h2>
+                  <p className="text-gray-300 text-sm sm:text-base leading-relaxed max-w-xl mx-auto mb-8">
+                    Estamos consolidando la lista oficial de ponentes, especialistas y conferencistas magistrales que participarán en el II CONIMAPE 2026.
+                  </p>
+                  <a
+                    href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola, me interesa postular como ponente para el II CONIMAPE 2026.')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-amber-500 hover:bg-amber-400 text-black font-extrabold px-8 py-3.5 rounded-full transition-all shadow-lg hover:scale-105 inline-flex items-center gap-2 text-sm"
+                  >
+                    <span>Postula tu Ponencia / Trabajo Técnico</span>
+                    <Send size={16} />
+                  </a>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         )}
 

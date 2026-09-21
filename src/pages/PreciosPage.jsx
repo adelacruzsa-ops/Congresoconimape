@@ -72,13 +72,7 @@ export default function PreciosPage() {
 
               <div>
                 <a
-                  href={
-                    plan.id === 'grupal'
-                      ? LINKS_INSCRIPCION.grupal
-                      : plan.id === 'profesionales'
-                        ? LINKS_INSCRIPCION.corporativa
-                        : LINKS_INSCRIPCION.individual
-                  }
+                  href={plan.link || LINKS_INSCRIPCION.individual}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`w-full inline-flex items-center justify-center gap-2 font-bold py-3.5 rounded-full transition-all duration-300 shadow-md ${plan.destacado

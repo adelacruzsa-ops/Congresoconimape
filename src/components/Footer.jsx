@@ -1,4 +1,4 @@
-import { SOCIAL_LINKS, LOCATION_INFO, CONTACT_EMAIL, WHATSAPP_DISPLAY, WHATSAPP_NUMBER } from '../config/constants'
+import { SOCIAL_LINKS, LOCATION_INFO, CONTACT_EMAIL, WHATSAPP_DISPLAY, WHATSAPP_NUMBER, WHATSAPP_COMMUNITY_LINK } from '../config/constants'
 import { Link } from 'react-router-dom'
 
 export default function Footer() {
@@ -116,6 +116,19 @@ export default function Footer() {
                 aria-label="TikTok"
               >
                 <i className="fa-brands fa-tiktok"></i>
+              </a>
+            </div>
+
+            {/* Banner Únete a la Comunidad Oficial en WhatsApp */}
+            <div className="mt-8">
+              <a
+                href={WHATSAPP_COMMUNITY_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-600 via-green-500 to-emerald-600 hover:from-emerald-500 hover:to-green-400 text-white font-extrabold px-7 py-3.5 rounded-full shadow-xl hover:scale-105 transition-all duration-300 text-sm"
+              >
+                <i className="fa-brands fa-whatsapp text-2xl"></i>
+                <span>Unirse al Grupo Oficial de la Comunidad en WhatsApp</span>
               </a>
             </div>
           </div>
