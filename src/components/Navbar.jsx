@@ -22,11 +22,11 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 w-full z-50 transition-all border-b border-white/10">
       <TopBar />
-      <div className="h-[75px] bg-black/90 backdrop-blur-md">
-        <nav className="max-w-7xl mx-auto h-full px-6 flex items-center justify-between">
+      <div className="min-h-[85px] bg-black/90 backdrop-blur-md flex items-center">
+        <nav className="max-w-7xl mx-auto w-full px-6 flex items-center justify-between py-2">
         {/* Logo Marca */}
         <Link to="/" className="flex items-center">
-          <img src="/imagenes/logo2.png" alt="Logo CONIMAPE" className="w-36 md:w-44 object-contain" />
+          <img src="/imagenes/logo2.png" alt="Logo CONIMAPE" className="h-16 sm:h-18 md:h-20 w-auto max-w-[200px] md:max-w-[240px] object-contain py-1" />
         </Link>
 
         {/* Links Desktop */}

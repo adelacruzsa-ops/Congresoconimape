@@ -13,7 +13,7 @@ export default function Countdown() {
           <img
             src="/imagenes/logo2.png"
             alt="Logo CONIMAPE"
-            className="w-32 md:w-44 drop-shadow-xl"
+            className="w-36 md:w-52 max-h-24 object-contain drop-shadow-xl"
           />
           <h2 className="text-3xl md:text-5xl font-light text-white leading-tight tracking-tight">
             Cuenta<br />
