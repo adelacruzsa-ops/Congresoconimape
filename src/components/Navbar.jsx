@@ -26,7 +26,7 @@ export default function Navbar() {
         <nav className="max-w-7xl mx-auto h-full px-6 flex items-center justify-between">
         {/* Logo Marca */}
         <Link to="/" className="flex items-center">
-          <img src="/imagenes/logo.png" alt="Logo CONIMAPE" className="w-36 md:w-44 object-contain" />
+          <img src="/imagenes/logo2.png" alt="Logo CONIMAPE" className="w-36 md:w-44 object-contain" />
         </Link>
 
         {/* Links Desktop */}

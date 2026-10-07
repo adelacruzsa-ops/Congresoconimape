@@ -1,5 +1,5 @@
 import { PRECIOS, LINK_FORM, LINKS_INSCRIPCION, WHATSAPP_NUMBER, CONTACT_EMAIL } from '../config/constants'
-import { Check, ShieldCheck, CreditCard, Sparkles, HelpCircle, ArrowRight } from 'lucide-react'
+import { Check, ShieldCheck, CreditCard, Sparkles, HelpCircle, ArrowRight, Calendar } from 'lucide-react'
 
 export default function PreciosPage() {
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola, me gustaría información sobre los métodos de pago e inscripción para el II CONIMAPE 2026.')}`
@@ -14,9 +14,15 @@ export default function PreciosPage() {
         <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white mb-4 tracking-tight">
           Precios de Inscripción CONIMAPE 2026
         </h1>
-        <p className="text-gray-300 text-base sm:text-lg max-w-3xl mx-auto mb-8 leading-relaxed">
+        <p className="text-gray-300 text-base sm:text-lg max-w-3xl mx-auto mb-6 leading-relaxed">
           Elige la tarifa que mejor se adapte a tu perfil y asegura tu vacante para el congreso minero más importante del año en Arequipa.
         </p>
+
+        {/* Banner Preventa Ampliada */}
+        <div className="mb-10 inline-flex items-center gap-2 bg-gradient-to-r from-amber-500/20 via-amber-500/10 to-amber-500/20 text-amber-300 border border-amber-500/30 px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold shadow-lg">
+          <Calendar size={18} className="text-amber-400 shrink-0" />
+          <span>¡Tarifas de preventa y descuentos ampliados hasta el <strong>15 DE OCTUBRE</strong>!</span>
+        </div>
 
         <div className="mb-16">
           <a

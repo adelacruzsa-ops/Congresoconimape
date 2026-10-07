@@ -11,7 +11,7 @@ export default function Countdown() {
         {/* Identidad de Marca */}
         <div className="flex items-center gap-6 text-center lg:text-left">
           <img
-            src="/imagenes/logo.png"
+            src="/imagenes/logo2.png"
             alt="Logo CONIMAPE"
             className="w-32 md:w-44 drop-shadow-xl"
           />

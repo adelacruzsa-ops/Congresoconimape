@@ -163,7 +163,7 @@ export const AUSPICIADORES = {
     platino: [
         {
             nombre: 'ExploraMining SAC',
-            logo: '/imagenes/logo.png',
+            logo: '/imagenes/logo2.png',
             categoria: 'Platino',
             descripcion: 'Proveedor de maquinaria pesada y soluciones tecnológicas orientadas al incremento de la productividad con seguridad en pequeña minería.',
         }
@@ -171,7 +171,7 @@ export const AUSPICIADORES = {
     oro: [
         {
             nombre: 'EcoTecnia Soluciones Mineras',
-            logo: '/imagenes/logo.png',
+            logo: '/imagenes/logo2.png',
             categoria: 'Oro',
             descripcion: 'Empresa especializada en el diseño de circuitos gravimétricos y equipos de recuperación de oro sin uso de sustancias contaminantes.',
         }
@@ -179,7 +179,7 @@ export const AUSPICIADORES = {
     aliados: [
         {
             nombre: 'Colegio de Ingenieros del Perú - CD Arequipa',
-            logo: '/imagenes/logo.png',
+            logo: '/imagenes/logo2.png',
             categoria: 'Institucional',
             descripcion: 'Institución gremial aliada comprometida con el desarrollo ético, técnico y profesional de los ingenieros y el sector minero regional.',
         }

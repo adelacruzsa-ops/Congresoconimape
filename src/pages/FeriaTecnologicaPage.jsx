@@ -3,7 +3,7 @@ import { Sparkles, ArrowRight, Building2, Cpu, Wrench, ShieldCheck, CheckCircle2
 import { WHATSAPP_NUMBER } from '../config/constants'
 
 export default function FeriaTecnologicaPage() {
-  const whatsappStandUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola, me interesa reservar un Stand de Exhibición (S/ 800 Incluye IGV) para el II CONIMAPE 2026.')}`
+  const whatsappStandUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola, me interesa reservar un Stand de Exhibición para el II CONIMAPE 2026.')}`
 
   return (
     <div className="pt-28 pb-20 px-4 sm:px-6 md:px-12 bg-dark-bg min-h-screen">
@@ -56,12 +56,10 @@ export default function FeriaTecnologicaPage() {
             {/* Cuadro de Tarifa de Stand */}
             <div className="bg-black/50 border border-amber-500/40 rounded-2xl p-6 text-center flex flex-col justify-between h-full shadow-xl">
               <div>
-                <span className="text-xs font-bold text-gray-400 uppercase tracking-widest block mb-1">COSTO DE ALQUILER POR STAND</span>
-                <div className="my-3">
-                  <span className="text-4xl sm:text-5xl font-extrabold text-amber-400">S/ 800</span>
-                  <span className="text-xs text-amber-300 font-bold block mt-1 uppercase tracking-wider">INCLUYE IGV</span>
-                </div>
-                <p className="text-xs text-gray-400 mb-6">Emisión de factura o boleta oficial</p>
+                <span className="text-xs font-bold text-amber-400 uppercase tracking-widest block mb-2">RESERVA TU STAND</span>
+                <p className="text-xs text-gray-300 mb-6 leading-relaxed">
+                  Consulta disponibilidad y solicita más información para asegurar el espacio de tu empresa en el evento.
+                </p>
               </div>
 
               <a

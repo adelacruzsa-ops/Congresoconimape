@@ -34,7 +34,7 @@ export default function Footer() {
 
           {/* Logo y Titular */}
           <div className="flex flex-col items-center">
-            <img src="/imagenes/logo.png" alt="Logo CONIMAPE" className="w-44 mb-4 opacity-90" />
+            <img src="/imagenes/logo2.png" alt="Logo CONIMAPE" className="w-44 mb-4 opacity-90" />
             <h2 className="text-2xl md:text-3xl font-bold text-gold-400 mb-2">
               Contáctanos
             </h2>

@@ -1,4 +1,5 @@
 import Hero from '../components/Hero'
+import VideoPromo from '../components/VideoPromo'
 import Countdown from '../components/Countdown'
 import About from '../components/About'
 import Topics from '../components/Topics'
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <VideoPromo />
       <Countdown />
       <About />
 
