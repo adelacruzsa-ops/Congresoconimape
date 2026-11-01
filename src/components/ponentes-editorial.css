@@ -1,0 +1,62 @@
+.pe2 { --crema: #f5eee3; --crema-2: #ece2d2; --tinta: #2a1217; --vino: #6a1530; --vino-hi: #8a1d3f; --oro: #b4832a; --suave: #7b6a61; --linea: rgba(42, 18, 23, .14);
+  --serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: clamp(20px, 4vw, 52px); text-align: left;
+  padding: clamp(24px, 4.5vw, 64px); border-radius: 32px; color: var(--tinta); font-family: 'Montserrat', system-ui, sans-serif;
+  background: radial-gradient(900px 400px at 100% 0, rgba(180, 131, 42, .14), transparent 70%), radial-gradient(700px 400px at 0 100%, rgba(106, 21, 48, .08), transparent 70%), var(--crema);
+  box-shadow: 0 40px 80px -40px rgba(0, 0, 0, .8); }
+.pe2 * { box-sizing: border-box; }
+.pe2 button:focus-visible { outline: 3px solid var(--vino); outline-offset: 3px; }
+
+/* índice lateral */
+.pe2-riel { position: sticky; top: 150px; align-self: start; display: grid; gap: 6px; padding-right: 26px; border-right: 1px solid var(--linea); }
+.pe2-riel button { display: grid; justify-items: start; gap: 2px; padding: 10px 0; background: none; border: 0; cursor: pointer; color: rgba(42, 18, 23, .35); transition: color .3s, transform .3s; }
+.pe2-riel button b { font-family: var(--serif); font-weight: 800; font-size: 54px; line-height: .9; letter-spacing: -.02em; }
+.pe2-riel button span { font-size: 11px; font-weight: 700; letter-spacing: .28em; text-transform: uppercase; }
+.pe2-riel button:hover { color: var(--vino-hi); }
+.pe2-riel button[aria-current="true"] { color: var(--vino); transform: translateX(6px); }
+.pe2-riel button[aria-current="true"] span::before { content: ""; display: inline-block; width: 22px; height: 2px; margin-right: 8px; vertical-align: middle; background: var(--oro); }
+.pe2-riel i { margin-top: 14px; font-style: normal; font-size: 10px; letter-spacing: .3em; text-transform: uppercase; color: var(--suave); line-height: 1.8; }
+
+.pe2-cuerpo { display: grid; gap: clamp(44px, 6vw, 80px); min-width: 0; }
+.pe2-dia { scroll-margin-top: 200px; }
+.pe2-dia header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 20px; padding-bottom: 16px; margin-bottom: 30px; border-bottom: 1px solid var(--linea); }
+.pe2-dia h3 { margin: 0; font-family: var(--serif); font-weight: 700; font-size: clamp(28px, 3.6vw, 44px); line-height: 1.05; color: var(--vino); letter-spacing: -.01em; }
+.pe2-dia h3 em { font-weight: 500; color: var(--suave); }
+.pe2-dia header span { font-size: 11px; font-weight: 700; letter-spacing: .26em; text-transform: uppercase; color: var(--oro); }
+
+.pe2-dia ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 40px 28px; }
+.pe2-ficha { display: grid; align-content: start; gap: 4px; opacity: 0; transform: translateY(30px); transition: opacity .8s, transform .9s cubic-bezier(.2, .8, .2, 1); transition-delay: calc(var(--k) * 90ms); }
+.pe2-ficha.in { opacity: 1; transform: none; }
+
+.pe2-foto { position: relative; aspect-ratio: 4 / 4.9; border-radius: 90px 20px 20px 20px; overflow: hidden; margin-bottom: 16px; background: var(--vino); box-shadow: 0 24px 40px -26px rgba(42, 18, 23, .7); }
+.pe2-foto img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; display: block; transition: transform .9s cubic-bezier(.2, .8, .2, 1), filter .5s; filter: saturate(.92); }
+.pe2-ficha:hover .pe2-foto img { transform: scale(1.06); filter: saturate(1.05); }
+.pe2-ph { position: absolute; inset: 0; background: radial-gradient(circle at 30% 20%, #9a2447, transparent 60%), linear-gradient(160deg, var(--vino-hi), #35091a); transition: transform .9s cubic-bezier(.2, .8, .2, 1); }
+.pe2-ficha:hover .pe2-ph { transform: scale(1.06); }
+.pe2-ph svg { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .5; }
+.pe2-ph span { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--serif); font-weight: 700; font-size: clamp(60px, 7vw, 88px); color: rgba(245, 238, 227, .92); letter-spacing: -.02em; padding-bottom: 10%; }
+.pe2-hora { position: absolute; left: 12px; bottom: 12px; padding: 7px 12px; border-radius: 99px; background: rgba(245, 238, 227, .94); color: var(--vino); font-size: 11px; font-weight: 700; letter-spacing: .06em; box-shadow: 0 6px 16px -6px rgba(0, 0, 0, .5); }
+.pe2-pais { position: absolute; top: 12px; right: 12px; padding: 5px 11px; border-radius: 99px; background: var(--oro); color: #fff; font-size: 10px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+
+.pe2-ficha h4 { margin: 0; font-family: var(--serif); font-weight: 700; font-size: clamp(20px, 1.9vw, 24px); line-height: 1.12; color: var(--tinta); text-wrap: balance; }
+.pe2-cargo { margin: 4px 0 0; font-size: 10.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--vino); line-height: 1.5; }
+.pe2-emp { margin: 0; font-size: 13.5px; color: var(--suave); line-height: 1.4; }
+.pe2-tema { margin: 12px 0 0; padding-top: 12px; border-top: 1px solid var(--linea); font-family: var(--serif); font-style: italic; font-size: 15.5px; line-height: 1.4; color: var(--tinta); text-wrap: pretty; }
+.pe2-tema.tbc { color: var(--suave); }
+
+@media (max-width: 900px) {
+  .pe2 { grid-template-columns: 1fr; gap: 24px; border-radius: 26px; }
+  .pe2-riel { position: sticky; top: 132px; z-index: 5; display: flex; gap: 8px; padding: 8px; border: 1px solid var(--linea); border-radius: 99px; background: rgba(245, 238, 227, .94); backdrop-filter: blur(8px); justify-content: center; }
+  .pe2-riel button { display: flex; align-items: baseline; gap: 8px; padding: 8px 16px; border-radius: 99px; }
+  .pe2-riel button b { font-size: 20px; }
+  .pe2-riel button[aria-current="true"] { background: var(--vino); color: var(--crema); transform: none; }
+  .pe2-riel button[aria-current="true"] span::before { display: none; }
+  .pe2-riel i { display: none; }
+  .pe2-dia { scroll-margin-top: 200px; }
+}
+@media (max-width: 560px) {
+  .pe2 { padding: 20px 16px; }
+  .pe2-dia ul { grid-template-columns: 1fr; gap: 34px; }
+  .pe2-foto { aspect-ratio: 4 / 4.2; }
+}
+@media (prefers-reduced-motion: reduce) { .pe2-ficha { opacity: 1; transform: none; transition: none; } .pe2-foto img, .pe2-ph { transition: none; } }
