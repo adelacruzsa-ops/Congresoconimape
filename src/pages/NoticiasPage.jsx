@@ -12,7 +12,7 @@ export default function NoticiasPage() {
   }, [selectedNoticia])
 
   return (
-    <div className="pt-28 pb-20 px-4 sm:px-6 md:px-12 bg-dark-bg min-h-screen">
+    <div className="pt-36 pb-20 px-4 sm:px-6 md:px-12 bg-dark-bg min-h-screen">
       <div className="max-w-5xl mx-auto">
         {selectedNoticia ? (
           /* =========================================================================
