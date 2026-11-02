@@ -18,10 +18,10 @@ export default function PreciosPage() {
           Elige la tarifa que mejor se adapte a tu perfil y asegura tu vacante para el congreso minero más importante del año en Arequipa.
         </p>
 
-        {/* Banner Preventa Ampliada */}
+        {/* Banner de inscripciones */}
         <div className="mb-10 inline-flex items-center gap-2 bg-gradient-to-r from-amber-500/20 via-amber-500/10 to-amber-500/20 text-amber-300 border border-amber-500/30 px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold shadow-lg">
           <Calendar size={18} className="text-amber-400 shrink-0" />
-          <span>¡Tarifas de preventa y descuentos ampliados hasta el <strong>15 DE OCTUBRE</strong>!</span>
+          <span>¡<strong>Inscripciones abiertas</strong>! Asegura tu lugar</span>
         </div>
 
         <div className="mb-16">
