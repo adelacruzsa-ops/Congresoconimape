@@ -13,8 +13,8 @@ export const LINK_FORM = LINKS_INSCRIPCION.individual
 // =========================================================================
 // VARIABLES DE CONTROL DE VISIBILIDAD (Configura en true o false)
 // =========================================================================
-export const MOSTRAR_PROGRAMA = false
-export const MOSTRAR_PONENTES = false
+export const MOSTRAR_PROGRAMA = true
+export const MOSTRAR_PONENTES = true
 
 export const WHATSAPP_NUMBER = '51942503614'
 export const WHATSAPP_DISPLAY = '+51 942 503 614'
