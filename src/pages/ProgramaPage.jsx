@@ -29,7 +29,7 @@ export default function ProgramaPage() {
                 to="/inscripcion"
                 className="bg-amber-500 hover:bg-amber-400 text-black font-extrabold px-8 py-3.5 rounded-full transition-all shadow-lg hover:scale-105 inline-flex items-center gap-2 text-sm"
               >
-                <span>Asegura tu Entrada Anticipada</span>
+                <span>Asegura tu Entrada desde ahora</span>
                 <ArrowRight size={16} />
               </Link>
             </div>
