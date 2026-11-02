@@ -5,7 +5,7 @@ export default function PreciosPage() {
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola, me gustaría información sobre los métodos de pago e inscripción para el II CONIMAPE 2026.')}`
 
   return (
-    <div className="pt-28 pb-20 px-4 sm:px-6 md:px-12 bg-dark-bg min-h-screen">
+    <div className="pt-36 pb-20 px-4 sm:px-6 md:px-12 bg-dark-bg min-h-screen">
       <div className="max-w-6xl mx-auto text-center">
         {/* Header */}
         <span className="inline-block px-4 py-1.5 rounded-full bg-amber-500/10 text-amber-400 text-sm font-semibold mb-3 border border-amber-500/20">
