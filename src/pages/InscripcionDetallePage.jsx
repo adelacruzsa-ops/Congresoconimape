@@ -87,7 +87,7 @@ export default function InscripcionDetallePage() {
             <span>GUÍA COMPLETA DE TARIFAS, PAGO Y REGISTRO</span>
           </div>
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white mb-4 tracking-tight">
-            Inscripción Anticipada <span className="text-amber-400">CONIMAPE 2026</span>
+            Inscripción <span className="text-amber-400">CONIMAPE 2026</span>
           </h1>
           <p className="text-gray-300 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
             Minería que impulsa desarrollo · Elige la opción que mejor va contigo y asegura tu lugar en Arequipa.
