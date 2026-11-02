@@ -40,7 +40,7 @@ export default function ProgramaPage() {
   }
 
   return (
-    <div className="pt-28 pb-20 px-6 md:px-12 bg-dark-bg min-h-screen">
+    <div className="pt-36 pb-20 px-6 md:px-12 bg-dark-bg min-h-screen">
       <div className="max-w-6xl mx-auto text-center">
         <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4">
           Programa y Cronograma del Evento
