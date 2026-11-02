@@ -7,7 +7,7 @@ export default function PonentesPage() {
   const hasSpeakers = PONENTES && PONENTES.length > 0
 
   return (
-    <div className="pt-28 pb-20 px-6 md:px-12 bg-dark-bg min-h-screen">
+    <div className="pt-36 pb-20 px-6 md:px-12 bg-dark-bg min-h-screen">
       <div className="max-w-6xl mx-auto text-center">
         {/* Header */}
         <span className="inline-block px-4 py-1.5 rounded-full bg-gold-500/10 text-gold-400 text-sm font-semibold mb-3 border border-gold-500/20">
