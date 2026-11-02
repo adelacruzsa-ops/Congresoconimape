@@ -44,7 +44,7 @@ export default function ParticipantesPage({ defaultTab }) {
   const whatsappUrlColaboradores = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola, deseo sumarme como colaborador/voluntario para el II CONIMAPE 2026.')}`
 
   return (
-    <div className="pt-28 pb-20 px-4 sm:px-6 md:px-12 bg-dark-bg min-h-screen">
+    <div className="pt-36 pb-20 px-4 sm:px-6 md:px-12 bg-dark-bg min-h-screen">
       <div className="max-w-6xl mx-auto text-center">
         {/* Header Principal */}
         <span className="inline-block px-4 py-1.5 rounded-full bg-amber-500/10 text-amber-400 text-sm font-semibold mb-3 border border-amber-500/20">
