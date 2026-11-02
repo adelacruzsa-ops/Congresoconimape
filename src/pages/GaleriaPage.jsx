@@ -39,7 +39,7 @@ export default function GaleriaPage() {
   const currentFoto = GALERIA_FOTOS[currentIndex]
 
   return (
-    <div className="pt-28 pb-20 px-4 sm:px-6 md:px-12 bg-dark-bg min-h-screen">
+    <div className="pt-36 pb-20 px-4 sm:px-6 md:px-12 bg-dark-bg min-h-screen">
       <div className="max-w-5xl mx-auto text-center">
         {/* Header */}
         <span className="inline-block px-4 py-1.5 rounded-full bg-amber-500/10 text-amber-400 text-sm font-semibold mb-3 border border-amber-500/20">
