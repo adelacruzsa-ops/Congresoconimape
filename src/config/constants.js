@@ -36,7 +36,7 @@ export const EVENT_DETAILS = {
     slogan: 'TRADICIÓN MINERA · FUTURO SOSTENIBLE',
     date: '04 - 06 de Noviembre 2026',
     location: 'AREQUIPA · PERÚ',
-    targetDate: 'November 4, 2026 09:00:00',
+    targetDate: '2026-11-04T09:00:00-05:00', // hora de Perú (UTC-5), igual para todos los visitantes
     mision: 'Promover el desarrollo integral, la innovación tecnológica y la formalización sostenible de la pequeña minería y minería artesanal en el Perú y Latinoamérica.',
     vision: 'Ser el congreso referente a nivel internacional para la transformación responsable, productiva y ambientalmente amigable del sector minero artesanal y de pequeña escala.',
 }
